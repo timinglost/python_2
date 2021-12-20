@@ -1,0 +1,9 @@
+item:
+- item-1
+- item-2
+price: 100
+some_price:
+  price-1: 1ˆ
+  price-2: 1ˆ
+  price-3: 1ˆ
+  price-4: 1ˆ
