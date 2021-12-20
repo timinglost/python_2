@@ -1,17 +1,15 @@
-word_1 = b'attribute'
-word_2 = 'класс'
-word_3 = 'функция'
-word_4 = b'type'
+import yaml
 
-"""
-Слова класс и функция:
-      File "task_3.py", line 2
-        word_2 = b'класс'
-                              ^
-    SyntaxError: bytes can only contain ASCII literal characters.
-    
-      File "task_3.py", line 3
-        word_3 = b'функция'
-                                  ^
-    SyntaxError: bytes can only contain ASCII literal characters.
-"""
+
+content = {
+    'item': ['item-1', 'item-2'],
+    'price': 100,
+    'some_price': {
+        'price-1': '1€',
+        'price-2': '1€',
+        'price-3': '1€',
+        'price-4': '1€'
+    }
+}
+with open('file.yaml', 'w') as yaml_file:
+    yaml.dump(content, yaml_file, default_flow_style=False, allow_unicode = True)
